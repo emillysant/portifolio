@@ -7,6 +7,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { MaterialModule } from '../material/material.module';
 import { AccomplishmentsComponent } from './accomplishments/accomplishments.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,9 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     HeaderComponent,
