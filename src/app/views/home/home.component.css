@@ -3,3 +3,14 @@
   min-height: 70vh;
   padding: 4rem;
 }
+
+.title {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  flex-wrap: wrap; /* Permite a quebra de linha automática */
+  align-items: flex-start; /* Alinha os elementos à esquerda */
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}

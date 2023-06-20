@@ -1,0 +1,6 @@
+.container {
+  min-height: 70vh;
+  padding: 4rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.06) 100%);
+
+}

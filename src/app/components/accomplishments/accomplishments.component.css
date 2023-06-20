@@ -1,0 +1,9 @@
+.container {
+  min-height: 70vh;
+  padding: 4rem;
+}
+
+.example-card {
+  max-width: 300px;
+  margin: 10px;
+}

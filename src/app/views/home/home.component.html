@@ -1,19 +1,58 @@
 <section class="container">
-  <div style="margin: 0px 2rem; margin-top: 5rem;">
-    <div style="padding: 0px 2rem;">
-      <small style="color: grey;">Olá, Eu sou Emilly Santiago</small>
+  <div
+    style="min-height: 50vh; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;">
+    <div>
+      <div style="padding: 1rem 2rem;">
+        <small>Olá, Eu sou Emilly Santiago</small>
+      </div>
+      <div style="padding: 1rem 2rem;">
+        <p style="font-size: 78px; line-height: 78px;">Front-end Developer</p>
+      </div>
+      <div style="color: grey; padding: 1rem 2rem;">
+        Desenvolvedora front-end com experiência em frameworks como Angular, React e Ionic.
+      </div>
     </div>
-    <div style="font-size: 78px; padding: 0px 2rem;">
-      Front-end Developer
-    </div>
-    <div style="color: grey; padding: 2rem;">
-      Desenvolvedora front-end com experiência em frameworks como Angular, React e Ionic.
+    <div style="margin: 1rem;">
+      <!-- <mat-divider></mat-divider> -->
+      <div style="display: flex; flex-direction: row;  margin-bottom: 2rem;">
+        <div class="example-box" *ngFor="let technology of technologies">
+          <div style="margin: 0.5rem;" [style.background-color]="technology.color">
+            <div
+              style="padding: 5px;display: flex; align-items: center; justify-content: center; flex-direction: column;">
+              <div *ngIf="technology.src != undefined" [matTooltip]="technology.name">
+                <img height="80" src="{{technology.src}}" alt="{{technology.name}} ">
+                <div style="margin-top: 0.2rem;">
+                  <div style="color: grey; font-size: 36px;">{{technology.time}}</div>
+                  <small style="color: grey; font-size: xx-small;">Anos de Experiência</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <mat-divider></mat-divider> -->
+
+
+      <h1>Other Skills</h1>
+      <div style="display: flex; flex-direction: row; ">
+        <code><img height="32" src="https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC" alt="visual-studio-code"/></code>
+        <code><img height="32" src="https://img.shields.io/badge/-Trello-333333?style=flat&logo=trello&logoColor=007ACC" alt="trello"/></code>
+        <code><img height="32" src="https://img.shields.io/badge/-Git-333333?style=flat&logo=git" alt="trello"/></code>
+        <code><img height="32" src="https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github" alt="trello"/></code>
+        <code><img height="32" src="https://img.shields.io/badge/-Postman-333333?style=flat&logo=postman" alt="trello"/></code>
+      </div>
     </div>
   </div>
 </section>
-<div>
+<section>
   <app-about></app-about>
-</div>
-<div>
+</section>
+<section>
   <app-experience></app-experience>
-</div>
+</section>
+<section>
+  <app-accomplishments></app-accomplishments>
+</section>
+<section>
+  <app-contact></app-contact>
+</section>
