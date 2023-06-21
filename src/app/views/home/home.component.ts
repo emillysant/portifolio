@@ -32,12 +32,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.buscarContatoENACOM()
+    // this.buscarContatoENACOM()
     this.loading = true
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe()
+    // this.subscription.unsubscribe()
   }
 
   usuarioCadastrando(event$: Event | boolean) {
