@@ -13,8 +13,8 @@
           </mat-card-title-group>
         </mat-card-header>
         <mat-card-content>
-          <p>{{experiences.description}}</p>
-          <p>{{experiences.technology}}</p>
+          <p>{{experiences.description | slice:0:400}}</p>
+          <p>{{experiences.technology | slice:0:100}}</p>
         </mat-card-content>
       </mat-card>
     </div>
