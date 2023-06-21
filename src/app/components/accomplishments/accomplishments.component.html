@@ -2,96 +2,23 @@
   <h1><strong>Accomplishments</strong></h1>
   <div style="margin-top: 4rem; display: flex; flex-wrap: wrap;">
 
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>
-          Mulheres em Tech Data Engineer - Azure
-        </mat-card-title>
-        <mat-card-subtitle>Mar 2023.</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Programa de engenharia de Dados para mulheres da Gama Academy
-        </p>
-        <p>Tecnologias: Python, Azure Data Factory, SQL, Kafka, ETL, WSL, spark, pandas</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button href="https://docs.google.com/document/d/1s8Zo8aBOsqeg_2pmXQIplzp44fJMllnro1w1CNqBe8s/edit"
-          target="_blank">Certificação</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>
-          NEXT
-        </mat-card-title>
-        <mat-card-subtitle>Ago 2022.</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Nova experiência de
-          trabalho do CESAR School. Criação de uma API no Spring Boot. Noção de tratamento de Dados usando a biblioteca
-          pandas do python</p>
-        <p>Tecnologias: Python, Spring Boot, Java, Pycharm, pandas</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button href="https://www.cesar.school/fast/" target="_blank">Certificação</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>
-          Hackathon Provi
-        </mat-card-title>
-        <mat-card-subtitle>Nov - Dez 2021.</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Desenvolver habilidades em tecnologia través de experiências práticas</p>
-        <p>Tecnologias: React, HTML, CSS, Javascript</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button href="https://drive.google.com/file/d/13try-1PjUpbCIAcZrO94szRTp-srAtPn/view"
-          target="_blank">Certificação</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>
-          Full-Stack Developer
-        </mat-card-title>
-        <mat-card-subtitle>Ago - Fev 2022.</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Curso de Formação em Full-Stack da Labenu</p>
-        <p>
-          Tecnologias: React, HTML, CSS, Javascript, React.js, Jest, Node, Typescript, MySQL, AWS, Firebase, Git/GitHub
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button
-          href="https://www.linkedin.com/in/emillysantiago23/details/education/1635487441373/single-media-viewer/?profileId=ACoAAAYIC5wBU6fClQm7D4PdZPHzlHWELrjMJdM"
-          target="_blank">Certificação</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>
-          The Web Developer BootCamp
-        </mat-card-title>
-        <mat-card-subtitle>jun 2021.</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Curso de Formação em Desenvolvimento Web da Udemy</p>
-        <p>
-          Tecnologias: React, HTML, CSS, Javascript, React.js
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-button href="https://www.udemy.com/certificate/UC-ed67e21b-6e6f-436b-a1ca-ff7cd1d2a12b/"
-          target="_blank">Certificação</a>
-      </mat-card-actions>
-    </mat-card>
+    <div *ngFor="let accomplishment of accomplishmentsData">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{accomplishment.title}}
+          </mat-card-title>
+          <mat-card-subtitle>{{accomplishment.period}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{accomplishment.description}}</p>
+          <p>{{accomplishment.technology}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button [href]="accomplishment.certification"
+            target="_blank">Certificação</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </section>

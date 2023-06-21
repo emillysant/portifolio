@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from "../models/interfaces";
+
+export const projects: Project[] = [
   {
     title: "EstanteDeLivros",
     framework: "Angular 14" ,
