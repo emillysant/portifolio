@@ -1,1 +1,21 @@
-<p>projects works!</p>
+<section class="container">
+  <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+    <div *ngFor="let project of projectsData">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{project.title}}</mat-card-title>
+          <mat-card-subtitle>{{project.framework}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{project.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a [href]="project.code" target="_blank" mat-button>CODE</a>
+          <span *ngIf="project.site">
+            <a [href]="project.site" target="_blank" mat-button>SITE</a>
+          </span>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
