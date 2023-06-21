@@ -5,6 +5,6 @@
       <img src="../../../assets/logo/logoEM.JPG" height="30px">
     </button>
     <span class="example-spacer"></span>
-    <button mat-button (click)="irParaProjetos()"><strong>Projetos</strong></button>
+    <button mat-button (click)="irParaProjetos()"><span [ngClass]="routeProject ? 'buttonSelected' : 'buttonNonSelected'" >Projetos</span></button>
   </mat-toolbar>
 </header>

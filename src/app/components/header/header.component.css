@@ -7,3 +7,12 @@
   flex: 1 1 auto;
 }
 
+.buttonSelected {
+  color: grey;
+  font-size: bold;
+}
+
+.buttonNonSelected {
+  font-weight: bold;
+  color: black;
+}
