@@ -3,8 +3,17 @@
   padding: 1rem 4rem;
 }
 
+.content {
+  padding: 0px;
+  background-color: transparent;
+}
+
 .example-spacer {
   flex: 1 1 auto;
+}
+
+.example-icon img {
+  height: 30px;
 }
 
 .buttonSelected {

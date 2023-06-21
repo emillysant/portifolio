@@ -17,6 +17,11 @@ export interface Technology {
   color: string;
   src?: string;
 }
+
+export interface OtherTechnology {
+  name: string;
+  src: string;
+}
 export interface Project {
   title: string;
   framework: string;

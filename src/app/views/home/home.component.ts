@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
-import { technologies } from 'src/app/data/technologies';
+import { otherTechnologies, technologies } from 'src/app/data/technologies';
 import { DadosEnacom, Technology } from 'src/app/models/interfaces';
 import { EmailService } from 'src/app/service/email.service';
 
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   dadosEnacom!: DadosEnacom;
 
   technologiesData = technologies;
-
+  otherTechnologyData = otherTechnologies;
 
   constructor(
     private emailService: EmailService,

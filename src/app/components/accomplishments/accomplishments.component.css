@@ -3,6 +3,12 @@
   padding: 4rem;
 }
 
+.content {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .example-card {
   max-width: 300px;
   margin: 10px;
