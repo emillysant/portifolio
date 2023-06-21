@@ -62,7 +62,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 3rem;
 }
 
 .form-contact-container {
@@ -70,4 +70,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media (max-width: 600px){
+  .content {
+    flex-direction: column;
+  }
+
+  .logoEnacom-container img {
+  width: 210px;
+  }
+
+  .example-card {
+    width: 210px;
+  }
+
+  .card-contact-container {
+    padding: 2rem;
+  }
 }
