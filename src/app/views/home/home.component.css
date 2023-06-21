@@ -71,6 +71,10 @@
   flex-direction: row;
 }
 
+.img-otherTech {
+  margin-right: 5px;
+}
+
 @media (max-width: 600px){
   .container {
     padding: 1rem;
@@ -85,7 +89,10 @@
   }
 
   .job-content {
-    font-size: 62px;
-    padding: 1rem;
+    font-size: 60px;
+  }
+
+  .job-container {
+    padding: 2rem;
   }
 }
