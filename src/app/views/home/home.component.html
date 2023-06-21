@@ -1,47 +1,41 @@
 <section class="container">
-  <div
-    style="min-height: 50vh; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;">
+  <div class="content">
     <div>
-      <div style="padding: 1rem 2rem;">
+      <div class="presentation-container">
         <small>Olá, Eu sou Emilly Santiago</small>
       </div>
-      <div style="padding: 1rem 2rem;">
-        <p style="font-size: 78px; line-height: 78px;">Front-end Developer</p>
+      <div class="job-container">
+        <p class="job-content">Front-end Developer</p>
       </div>
-      <div style="color: grey; padding: 1rem 2rem;">
+      <div class="introduction-container">
         Desenvolvedora front-end com experiência em frameworks como Angular, React e Ionic.
       </div>
     </div>
-    <div style="margin: 1rem;">
-      <!-- <mat-divider></mat-divider> -->
-      <div style="display: flex; flex-direction: row;  margin-bottom: 2rem;">
-        <div class="example-box" *ngFor="let technology of technologies">
-          <div style="margin: 0.5rem;" [style.background-color]="technology.color">
-            <div
-              style="padding: 5px;display: flex; align-items: center; justify-content: center; flex-direction: column;">
+
+    <div class="skills-container">
+      <div class="skills-content">
+        <div class="example-box" *ngFor="let technology of technologiesData">
+          <div [style.background-color]="technology.color" class="technology-container">
+            <div class="technology-content">
               <div *ngIf="technology.src != undefined" [matTooltip]="technology.name">
                 <img height="80" src="{{technology.src}}" alt="{{technology.name}} ">
-                <div style="margin-top: 0.2rem;">
-                  <div style="color: grey; font-size: 36px;">{{technology.time}}</div>
-                  <small style="color: grey; font-size: xx-small;">Anos de Experiência</small>
+                <div class="technology-time-container">
+                  <div class="technology-time">{{technology.time}}</div>
+                  <small class="technology-time-subtitle">Anos de Experiência</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <mat-divider></mat-divider> -->
-
-
       <h1>Other Skills</h1>
-      <div style="display: flex; flex-direction: row; ">
-        <code><img height="32" src="https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC" alt="visual-studio-code"/></code>
-        <code><img height="32" src="https://img.shields.io/badge/-Trello-333333?style=flat&logo=trello&logoColor=007ACC" alt="trello"/></code>
-        <code><img height="32" src="https://img.shields.io/badge/-Git-333333?style=flat&logo=git" alt="trello"/></code>
-        <code><img height="32" src="https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github" alt="trello"/></code>
-        <code><img height="32" src="https://img.shields.io/badge/-Postman-333333?style=flat&logo=postman" alt="trello"/></code>
+      <div class="otherSkills-container">
+        <div *ngFor="let otherTech of otherTechnologyData" >
+          <code><img height="32" src="{{otherTech.src}}" alt="{{otherTech.name}}"/></code>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 <section>

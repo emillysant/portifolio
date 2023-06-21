@@ -1,76 +1,22 @@
 <section class="container">
   <h1><strong>Experience</strong></h1>
-  <div style="display: flex; flex-direction: column;  flex-wrap: wrap; align-items: center; justify-content: center;">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title-group>
-          <mat-card-title>Desenvolvedor Júnior</mat-card-title>
-          <mat-card-subtitle>
-            <p>Technook - Empresa da área e telemetria e IoT</p>
-            <p>Jan 22 até o momento</p>
-          </mat-card-subtitle>
-          <mat-card-subtitle></mat-card-subtitle>
-        </mat-card-title-group>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Desenvolvimento de aplicações mobile híbridas
-          do design
-          até a implantação, utilizando ionic e Angular. Integração do sistema com o back-end. Manutenção, criação e
-          refatornação
-          de SPAs em Angular. Criação de testes com Karma e Jasmine.
-          Competências: Teste de unidade · Revisão de código · Swagger API · Bootstrap · Ionic Framework · API REST ·
-          Node.js ·
-          JavaScript · CSS · HTML · Angular · HTML5 · Git · GitHub · TypeScript
-        </p>
-        <p>
-          Tecnologias utilizadas: Typescript, Angular, Ionic,
-          Karma,
-          Jasmine, Bootstrap5, Angular Material.
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title-group>
-          <mat-card-title>Analista de Orçamentos</mat-card-title>
-          <mat-card-subtitle>
-            <p>Usimequi - Empresa de manutenção Industrial</p>
-            <p>jan de 2020 - dez de 2020</p>
-          </mat-card-subtitle>
-          <mat-card-subtitle></mat-card-subtitle>
-        </mat-card-title-group>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Custeio de peças e equipamentos mecânicos produzidos por meio de processos de usinagem e caldeiraria.
-          Interpretação de projetos e especificações técnicas seguindo normas de qualidade e segurança do trabalho.
-          Análise técnica da viabilidade de produção e custo envolvidos no projeto (materiais, usinagem, tratamentos,
-          revestimentos, ensaios diversos, pintura inspeção e transporte).
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title-group>
-          <mat-card-title>Estagiário de projetos</mat-card-title>
-          <mat-card-subtitle>
-            <p>IFPE Campus Recife · Meio períod</p>
-            <p>mai de 2019 - dez de 2019</p>
-          </mat-card-subtitle>
-          <mat-card-subtitle></mat-card-subtitle>
-        </mat-card-title-group>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          O Instituto Federal De Educação, Ciência E Tecnologia De Pernambuco é uma instituição de ensino superior
-          pública.
-          • Projeto mecânico utilizando ferramenta computacional.
-          • Programação em código G para uso em máquinas CNC (Comando Numérico
-          Computadorizado);
-          • Controle da máquina utilizando sistemas embarcados e linguagem C.
-        </p>
-      </mat-card-content>
-    </mat-card>
+  <div class="content">
+    <div *ngFor="let experiences of experiencesData">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{experiences.title}}</mat-card-title>
+            <mat-card-subtitle>
+              <p>{{experiences.subtitle}}</p>
+              <p>{{experiences.period}}</p>
+            </mat-card-subtitle>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{experiences.description}}</p>
+          <p>{{experiences.technology}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </section>

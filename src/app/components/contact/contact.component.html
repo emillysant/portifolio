@@ -1,53 +1,49 @@
 <section class="container">
   <h1><strong>Contact</strong></h1>
-  <div
-    style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; margin-top: 4rem;">
-    <div *ngIf="dadosEnacom"
-    style="width: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; color: grey;">
-    <mat-card style="margin-bottom: 10px;">
-      <img width="300px" src="../../../assets/logo/logoFundoBrancoENACOM.png" />
-    </mat-card>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>{{dadosEnacom.contact.name}}</mat-card-title>
-        <mat-card-subtitle>{{dadosEnacom.subject_matter}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        Comunicação com a API da ENACOM como parte do processo seletivo para vaga de desenvolvedor Front-end.
-      </mat-card-content>
-      <mat-card-actions>
-        <mat-accordion style="border: none;">
-          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Contatos
-              </mat-panel-title>
-              <mat-panel-description>
+  <div class="content">
+    <div *ngIf="dadosEnacom" class="dadosEnacom-container">
+      <mat-card class="logoEnacom-container">
+        <img src="../../../assets/logo/logoFundoBrancoENACOM.png" />
+      </mat-card>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{dadosEnacom.contact.name}}</mat-card-title>
+          <mat-card-subtitle>{{dadosEnacom.subject_matter}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          Comunicação com a API da ENACOM como parte do processo seletivo para vaga de desenvolvedor Front-end.
+        </mat-card-content>
+        <mat-card-actions>
+          <mat-accordion class="accordion-container">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Contatos
+                </mat-panel-title>
+                <mat-panel-description>
 
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            {{dadosEnacom.contact.tel}}
-            <br>
-            {{dadosEnacom.contact.email}}
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-card-actions>
-    </mat-card>
-  </div>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              {{dadosEnacom.contact.tel}}
+              <br>
+              {{dadosEnacom.contact.email}}
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-
-    <div
-      style="width: 50%; display: flex; align-items: center; justify-content: center; margin: 10px;">
-      <mat-card
-        style="width: fit-content; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 1rem 2rem;">
+    <div class="contact-container">
+      <mat-card class="card-contact-container">
         <mat-card-header>
           <mat-card-title>Entre em Contato</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <form class="example-form" [formGroup]="formCliente" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <form class="example-form" [formGroup]="formCliente" class="form-contact-container">
             <mat-form-field class="example-full-width">
               <mat-label>Email</mat-label>
-              <input type="email" matInput name="email" id="email" formControlName="email" required pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" placeholder="Ex. pat@example.com">
+              <input type="email" matInput name="email" id="email" formControlName="email" required
+                pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" placeholder="Ex. pat@example.com">
               <mat-error *ngIf="formCliente.hasError('email') && !formCliente.hasError('required')">
                 Please enter a valid email address
               </mat-error>
@@ -61,7 +57,8 @@
             </mat-form-field>
             <mat-form-field class="example-full-width">
               <mat-label>Telefone</mat-label>
-              <input matInput placeholder="(00) 00000-0000"  name="tel" id="tel" formControlName="tel" mask="(00) 00000-0000">
+              <input matInput placeholder="(00) 00000-0000" name="tel" id="tel" formControlName="tel"
+                mask="(00) 00000-0000">
             </mat-form-field>
           </form>
         </mat-card-content>

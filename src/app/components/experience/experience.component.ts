@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { experiences } from 'src/app/data/experience';
 
 @Component({
   selector: 'app-experience',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
+
+  experiencesData = experiences
 
   constructor() { }
 
