@@ -12,6 +12,7 @@ import { ComponentsModule } from './components/components.module';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterModule } from './pipe/app-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
+    FilterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
