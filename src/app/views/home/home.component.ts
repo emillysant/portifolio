@@ -31,11 +31,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // this.subscription.unsubscribe()
+    this.subscription.unsubscribe()
   }
 
   usuarioCadastrando(event$: Event | boolean) {
-    console.log("Retorno do output", event$)
     this.loading = !event$
     if (event$) {
       this.openSnackBar("Obrigada pelo seu contato!", "Fechar")
@@ -53,7 +52,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subscription = this.emailService.sendEmailENACOM().subscribe(
       (response: DadosEnacom) => {
         this.dadosEnacom = response
-        console.log("response", response)
         return this.dadosEnacom
       }
     )

@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {
     this.route = router.events.subscribe((route) => {
       if (route instanceof NavigationEnd) {
-       console.log("rota projetos",this.router.url.includes('projects'))
         this.routeProject = this.router.url.includes('projects')
       }
     })
