@@ -60,7 +60,7 @@ linguagens de programação e projetos já desenvolvidos (caso tenha).
 </ul>
 *Não é necessária a realização dos itens opcionais, mas ficaremos super felizes se forem feitos!
 
-### Deploy 
+### Deploy automático com Netlify
 
 https://santiagoemilly-portifolio.netlify.app
 
