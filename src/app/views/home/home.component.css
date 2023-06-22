@@ -4,17 +4,6 @@
   padding: 4rem;
 }
 
-.title {
-  display: flex;
-  flex-direction: column; /* Organiza os elementos verticalmente */
-  flex-wrap: wrap; /* Permite a quebra de linha automática */
-  align-items: flex-start; /* Alinha os elementos à esquerda */
-}
-
-.demo-section + .demo-section {
-  margin-top: 16px;
-}
-
 .content {
   min-height: 50vh;
   display: flex;
@@ -80,4 +69,30 @@
 .otherSkills-container {
   display: flex;
   flex-direction: row;
+}
+
+.img-otherTech {
+  margin-right: 5px;
+}
+
+@media (max-width: 600px){
+  .container {
+    padding: 1rem;
+  }
+
+  .skills-content {
+    flex-wrap: wrap;
+  }
+
+  .otherSkills-container {
+    flex-direction: column;
+  }
+
+  .job-content {
+    font-size: 60px;
+  }
+
+  .job-container {
+    padding: 2rem;
+  }
 }
