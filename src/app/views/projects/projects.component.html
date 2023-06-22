@@ -1,6 +1,15 @@
 <section class="container">
+  <div class="busca">
+    <mat-form-field class="example-form-field">
+      <mat-label>Pesquisar</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
   <div class="content">
-    <div *ngFor="let project of projectsData">
+    <div *ngFor="let project of projectsData | appFilter: value">
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title>{{project.title}}</mat-card-title>

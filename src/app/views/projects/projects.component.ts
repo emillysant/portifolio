@@ -9,6 +9,7 @@ import { projects } from 'src/app/data/projects';
 export class ProjectsComponent implements OnInit {
 
   projectsData = projects
+  value = '';
 
   constructor() { }
 

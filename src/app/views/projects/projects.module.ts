@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProjectsComponent } from './projects.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { FilterModule } from 'src/app/pipe/app-filter.pipe';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialModule,
-    ComponentsModule
+    ComponentsModule,
+    FilterModule,
   ],
   exports: [
     ProjectsComponent,
